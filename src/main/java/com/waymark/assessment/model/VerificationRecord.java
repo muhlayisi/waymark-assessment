@@ -1,5 +1,6 @@
 package com.waymark.assessment.model;
 
+import com.waymark.assessment.enums.Status;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Getter;
@@ -15,7 +16,7 @@ public class VerificationRecord {
     private long id;
     private String idNumber;
     private String fullName;
-    private String status;
+    private Status status;
     private Timestamp createdAt;
     private int confidence;
     private String rejectionReason;
