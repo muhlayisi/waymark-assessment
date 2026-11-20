@@ -14,5 +14,6 @@ jobs:
         uses: github/super-linter@v4
         env:
           DEFAULT_BRANCH: main
-          JAVA_LINTER_RULES: /github/workspace/.github/linters/checkstyle.xml
+          LINTER_RULES_PATH: .github/linters
+          JAVA_FILE_NAME: checkstyle.xml
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
