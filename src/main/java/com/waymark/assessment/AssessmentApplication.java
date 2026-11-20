@@ -9,8 +9,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AssessmentApplication {
 
-  public static void main(String[] args) {
-    SpringApplication.run(AssessmentApplication.class, args);
+  /**
+   * Protected constructor to satisfy Checkstyle while allowing Spring Boot
+   * proxy instantiation.
+   */
+  protected AssessmentApplication() {
   }
 
+  /**
+   * Starts the Spring Boot application.
+   *
+   * @param args command-line arguments passed to the application
+   */
+  public static void main(final String[] args) {
+    SpringApplication.run(AssessmentApplication.class, args);
+  }
 }
