@@ -10,8 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AssessmentApplication {
 
   /**
-   * Protected constructor to satisfy Checkstyle while allowing Spring Boot
-   * proxy instantiation.
+   * Protected constructor to satisfy Checkstyle while allowing Spring Boot proxy instantiation.
    */
   protected AssessmentApplication() {
   }
