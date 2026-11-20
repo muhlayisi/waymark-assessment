@@ -14,12 +14,12 @@ public class VerificationRecordsService {
 
     private VerificationRecordsRepository verificationRecordsRepository;
 
-    public List<VerificationRecord> getAllVerificationRecords(){
+    public List<VerificationRecord> getAllVerificationRecords() {
         List<VerificationRecord> verificationRecords = verificationRecordsRepository.findAll();
         return verificationRecords;
     }
 
-    public Optional<VerificationRecord> getVerificationRecordById(long id){
+    public Optional<VerificationRecord> getVerificationRecordById(long id) {
         return verificationRecordsRepository.findById(id);
     }
 

@@ -14,13 +14,13 @@ public class JsonTransformationService {
 
     private final ObjectMapper objectMapper;
 
-    public JsonTransformationService(){
+    public JsonTransformationService() {
         this.objectMapper = new ObjectMapper()
                 .configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true)
                 .configure(JsonParser.Feature.ALLOW_SINGLE_QUOTES, true);
     }
 
-    public String transformToJson(String fileContent){
+    public String transformToJson(String fileContent) {
         String transformedJson = fileContent;
 
         if (transformedJson.endsWith(";")) {
@@ -36,7 +36,7 @@ public class JsonTransformationService {
         return transformedJson;
     }
 
-    public List<VerificationRecord> getVerificationRecordsList(String jsonVerificationRecords){
+    public List<VerificationRecord> getVerificationRecordsList(String jsonVerificationRecords) {
         List<VerificationRecord> verificationRecordList = null;
 
         try {

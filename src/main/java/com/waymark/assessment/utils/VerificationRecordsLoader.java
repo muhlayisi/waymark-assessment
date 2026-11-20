@@ -3,7 +3,6 @@ package com.waymark.assessment.utils;
 import com.waymark.assessment.model.VerificationRecord;
 import com.waymark.assessment.service.JsonTransformationService;
 import com.waymark.assessment.service.VerificationRecordsService;
-import lombok.AllArgsConstructor;
 import org.jspecify.annotations.NonNull;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -31,7 +30,7 @@ public class VerificationRecordsLoader implements CommandLineRunner {
         this.verificationRecordsService = verificationRecordsService;
     }
 
-    private String getFileContent(){
+    private String getFileContent() {
         try {
             Path path = Paths.get(filePath);
 
