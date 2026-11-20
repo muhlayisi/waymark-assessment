@@ -54,7 +54,8 @@ public class VerificationRecordsLoader implements CommandLineRunner {
 
         if (fileContent != null) {
             String jsonVerificationRecords = jsonTransformationService.transformToJson(fileContent);
-            List<VerificationRecord> verificationRecords = jsonTransformationService.getVerificationRecordsList(jsonVerificationRecords);
+            List<VerificationRecord> verificationRecords = 
+                jsonTransformationService.getVerificationRecordsList(jsonVerificationRecords);
             verificationRecordsService.saveAllVerificationRecords(verificationRecords);
             System.out.println("Successfully saved " + verificationRecords.size() + " records to the H2 database!");
         }
